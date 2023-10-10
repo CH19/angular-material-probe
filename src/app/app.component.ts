@@ -9,4 +9,5 @@ import { PhotosService} from './services/photos.service'
 })
 export class AppComponent {
   title = 'material-prueba';
+  options = [1,2,3];
 }

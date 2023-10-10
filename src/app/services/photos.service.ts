@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
+import { pohtosData } from '../models/photo';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,6 @@ export class PhotosService {
 
   }
   getPhotos(){
-    return this.http.get('https://jsonplaceholder.typicode.com/photos?_limit=10')
+    return this.http.get<pohtosData[]>('https://api.escuelajs.co/api/v1/products?offset=0&limit=10')
   }
 }
