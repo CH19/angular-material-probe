@@ -1,7 +1,10 @@
+
+
 <div class="products-container">
+
   <mat-card *ngFor="let photo of AllPhotos" style="border: 1px black solid;">
     <mat-card-header>
-      <mat-card-title> <span>{{photo.id}}</span>
+      <mat-card-title> <span>{{photo.title}}</span>
         <br>
         <img mat-card-lg-image src="{{photo.images[0]}}" alt="">
 

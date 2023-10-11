@@ -9,7 +9,7 @@ import {MatSelectModule} from '@angular/material/select';
 
   imports: [
     MatButtonModule,
-    MatCardModule,
+    MatCardModule,  
     MatSelectModule
   ],
   exports: [

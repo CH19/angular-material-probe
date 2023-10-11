@@ -1,0 +1,13 @@
+<mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+  <mdb-carousel-item *ngFor="let product of images">
+    <img
+      src="{{product.iamge}}" style="height: 300px;"
+      class="d-block w-100 h-50"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>{{product.title}}</h5>
+      <p>{{product.description}}</p>
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel>

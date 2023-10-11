@@ -7,7 +7,7 @@ import {HttpClientModule} from '@angular/common/http'
 @Component({
   selector: 'app-images-product',
   templateUrl: './images-product.component.html',
-  styleUrls: ['./images-product.component.css'],
+  styleUrls: ['./images-product.component.scss'],
 
 })
 export class ImagesProductComponent implements OnInit {
