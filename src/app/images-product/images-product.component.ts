@@ -17,7 +17,9 @@ export class ImagesProductComponent implements OnInit {
   constructor(public photoService: PhotosService){
 
   }
-
+  clicked(product: pohtosData){
+    product.clicked = !product.clicked;
+  }
   ngOnInit(){
     // cuando el componente se cree se hace la peticion a los servicios http para obtener la data de las imagenes
     this.photoService.getPhotos().subscribe(photos =>{ this.AllPhotos = photos; console.log(this.AllPhotos);}, err => console.log(err))

@@ -2,17 +2,24 @@
 
 <div class="products-container">
 
-  <mat-card *ngFor="let photo of AllPhotos" style="border: 1px black solid;">
-    <mat-card-header>
+  <mat-card (click)="clicked(photo)"  *ngFor="let photo of AllPhotos" style="border: 1px black solid;">
+    <mat-card-header >
       <mat-card-title> <span>{{photo.title}}</span>
-        <br>
-        <img mat-card-lg-image src="{{photo.images[0]}}" alt="">
+      <br>
+      <img mat-card-lg-image src="{{photo.images[0]}}" alt="">
 
       </mat-card-title>
     </mat-card-header>
-    <mat-card-content>{{photo.description}}</mat-card-content>
-    <mat-card-footer>Estamos poniendolo al final <br>
+    <mat-card-content>
+      <p>${{photo.price}}</p>
+    </mat-card-content>
+    <mat-card-footer>
         <button mat-raised-button>Comprar</button> </mat-card-footer>
-
+      <ng-container *ngIf="photo.clicked" >
+        <div class="message" [class.selected]="photo.price > 100">
+          <h1>{{photo.title}}</h1>
+          <p><strong>Description:</strong> {{photo.description}}</p>
+        </div>
+      </ng-container>
   </mat-card>
 </div>

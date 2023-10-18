@@ -12,5 +12,5 @@ export interface pohtosData{
   ​​
   images: string[]
   ​
-  ​​
+  ​​clicked: boolean;
 }

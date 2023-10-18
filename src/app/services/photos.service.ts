@@ -13,6 +13,6 @@ export class PhotosService {
 
   }
   getPhotos(){
-    return this.http.get<pohtosData[]>('https://api.escuelajs.co/api/v1/products?offset=0&limit=10')
+    return this.http.get<pohtosData[]>('https://api.escuelajs.co/api/v1/products?offset=0&limit=15')
   }
 }

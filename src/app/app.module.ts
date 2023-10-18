@@ -22,13 +22,15 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
-import { CarrouselComponent } from './carrousel/carrousel.component'
+import { CarrouselComponent } from './carrousel/carrousel.component';
+import { HeaderComponent } from './header/header.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ImagesProductComponent,
     CarrouselComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
