@@ -1,10 +1,4 @@
-<app-header />
-<app-carrousel />
-<app-images-product />
 
-<mat-select placeholder="Elige">
-  <mat-option *ngFor="let id of options" (value)="id">{{ id }}</mat-option>
-</mat-select>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
@@ -12,4 +6,4 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<router-outlet></router-outlet>

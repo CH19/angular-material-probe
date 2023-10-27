@@ -2,7 +2,7 @@
 
 <div class="products-container">
 
-  <mat-card (click)="clicked(photo)"  *ngFor="let photo of AllPhotos" style="border: 1px black solid;">
+  <mat-card   *ngFor="let photo of AllPhotos" style="border: 1px black solid;">
     <mat-card-header >
       <mat-card-title> <span>{{photo.title}}</span>
       <br>
@@ -14,7 +14,11 @@
       <p>${{photo.price}}</p>
     </mat-card-content>
     <mat-card-footer>
-        <button mat-raised-button>Comprar</button> </mat-card-footer>
+      <a [routerLink]="'/product/'+photo.id">
+        <button mat-raised-button>Comprar</button>
+
+      </a>
+    </mat-card-footer>
       <ng-container *ngIf="photo.clicked" >
         <div class="message" [class.selected]="photo.price > 100">
           <h1>{{photo.title}}</h1>

@@ -1,0 +1,17 @@
+<app-header/>
+<div>
+  <!-- no soportado no entiendo  -->
+    <div class="product-container" *ngFor="let prodcut of ActualPRoduct">
+      <figure (click)="selectedMethod(imgproduct)" class="img-product" *ngFor="let imgproduct of prodcut.images">
+        <img [src]="imgproduct" alt="">
+      </figure>
+      <figure>
+        <img [src]="selected" alt="">
+      </figure>
+      <section>
+          <h1>
+            {{prodcut.title}}
+          </h1>
+      </section>
+    </div>
+</div>

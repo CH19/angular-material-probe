@@ -24,6 +24,28 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { CarrouselComponent } from './carrousel/carrousel.component';
 import { HeaderComponent } from './header/header.component'
+import {RouterModule, Routes} from '@angular/router';
+import { MainComponent } from './main/main.component';
+import { ProductComponent } from './product/product.component';
+
+const routes = [
+{
+  path: '*',
+  component: MainComponent,
+} ,
+  {
+    path: 'main',
+    component: MainComponent
+  },
+  {
+    path: 'product',
+    component: ProductComponent
+  },
+  {
+    path: 'product/:id',
+    component: ProductComponent,
+  }
+]
 
 @NgModule({
   declarations: [
@@ -31,6 +53,8 @@ import { HeaderComponent } from './header/header.component'
     ImagesProductComponent,
     CarrouselComponent,
     HeaderComponent,
+    MainComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,10 +76,11 @@ import { HeaderComponent } from './header/header.component'
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    NoopAnimationsModule
-    
+    NoopAnimationsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
