@@ -28,13 +28,22 @@ import {RouterModule, Routes} from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { ProductComponent } from './product/product.component';
 
+// Angular material
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+
 const routes = [
+
 {
   path: '*',
   component: MainComponent,
 } ,
   {
     path: 'main',
+    component: MainComponent
+  },
+  {
+    path: '',
     component: MainComponent
   },
   {
@@ -77,7 +86,9 @@ const routes = [
     MdbTooltipModule,
     MdbValidationModule,
     NoopAnimationsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

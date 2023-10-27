@@ -1,17 +1,32 @@
 <app-header/>
-<div>
+<div class="main-container">
   <!-- no soportado no entiendo  -->
     <div class="product-container" *ngFor="let prodcut of ActualPRoduct">
-      <figure (click)="selectedMethod(imgproduct)" class="img-product" *ngFor="let imgproduct of prodcut.images">
-        <img [src]="imgproduct" alt="">
-      </figure>
-      <figure>
+      <div class="photos">
+        <figure (click)="selectedMethod(imgproduct)" class="img-product" *ngFor="let imgproduct of prodcut.images">
+          <img [src]="imgproduct" alt="">
+        </figure>
+      </div>
+      <figure class="main-img">
         <img [src]="selected" alt="">
       </figure>
       <section>
           <h1>
             {{prodcut.title}}
           </h1>
-      </section>
-    </div>
+          <mat-icon *ngFor="let star of starti">{{star}}</mat-icon>
+          <h2>U$S{{prodcut.price}}</h2>
+          <ng-container *ngIf="!FreeSend">
+            <div class="freeSend">
+              <mat-icon>local_shipping</mat-icon>
+              <p>
+                Envio Gratis a Todo el pais
+
+              </p>
+            </div>
+          </ng-container>
+          <button mat-raised-button color="primary">Buy now</button>
+        </section>
+        </div>
+
 </div>
